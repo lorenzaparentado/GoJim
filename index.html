@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>GoJim!</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to GoJim!</h1>
+    </header>
+
+   <nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutus.html">About</a></li>
+    <li><a href="tipspage.html">Tips</a></li>
+    <li><a href="Calc.html">Calculators</a></li>
+    <li><a href="gymgallery.html">Gallery</a></li>
+    <li><a href="contactus.html">Contact Us</a></li>
+    <li><a href="goals.html">Set Goals</a></li>
+    <li><a href="calorieTracker.html">Calorie Tracker</a>
+  </ul>
+</nav>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+      
+  const firebaseConfig = {
+    apiKey: "AIzaSyC3Vuf4ma6wKrrphF7tbmd2ih0Qr28w2sM",
+    authDomain: "gojim-26cbc.firebaseapp.com",
+    projectId: "gojim-26cbc",
+    storageBucket: "gojim-26cbc.appspot.com",
+    messagingSenderId: "491730952662",
+    appId: "1:491730952662:web:2f430530eef2e0ebfbc477",
+    measurementId: "G-C5KT1RZJYS"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  </script>
+  </body>

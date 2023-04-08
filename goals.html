@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Goals System</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+   <link rel="stylesheet" href="goals.css">
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutus.html">About</a></li>
+    <li><a href="tipspage.html">Tips</a></li>
+    <li><a href="Calc.html">Calculators</a></li>
+    <li><a href="gymgallery.html">Gallery</a></li>
+    <li><a href="goals.html">Set Goals</a></li>
+    <li><a href="contactus.html">Contact Us</a></li>
+  </ul>
+</nav>
+<body onload="loadGoals()">
+	<h1>Goals</h1>
+	<input type="text" id="input" placeholder="Set a goal...">
+	<button onclick="addItem()">Add Goal</button>
+	<ul id="list">
+	</ul>
+	
+	<script>
+		function addItem() {
+			let input = document.getElementById("input");
+			let list = document.getElementById("list");
+			let newItem = document.createElement("li");
+			let text = document.createTextNode(input.value);
+			newItem.appendChild(text);
+			list.appendChild(newItem);
+			input.value = "";
+			
+			// Save the goal to local storage
+			let goals = JSON.parse(localStorage.getItem("goals")) || [];
+			goals.push(text.textContent);
+			localStorage.setItem("goals", JSON.stringify(goals));
+		}
+		
+		function loadGoals() {
+			// Retrieve the saved goals from local storage
+			let goals = JSON.parse(localStorage.getItem("goals")) || [];
+			
+			// Add the saved goals to the list
+			let list = document.getElementById("list");
+			for (let i = 0; i < goals.length; i++) {
+				let newItem = document.createElement("li");
+				let text = document.createTextNode(goals[i]);
+				newItem.appendChild(text);
+				list.appendChild(newItem);
+			}
+		}
+	</script>
+</body>
+</html>

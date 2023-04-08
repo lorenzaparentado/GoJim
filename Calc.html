@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Calculators</title>
+  <link rel="stylesheet" href="Calc.css">
+</head>
+  <header>
+      <h1>Calculators</h1>
+  </header>
+   <nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutus.html">About</a></li>
+    <li><a href="tipspage.html">Tips</a></li>
+    <li><a href="Calc.html">Calculators</a></li>
+    <li><a href="gymgallery.html">Gallery</a></li>
+    <li><a href="goals.html">Set Goals</a></li>
+    <li><a href="contactus.html">Contact Us</a></li>
+  </ul>
+</nav>
+<body>
+  <b>BMI (Body Mass Index) CALCULATOR</b>
+  <script src="Calc.js"></script>
+  <p></p>
+    <label for="bmiWeight">Weight in kg</label>
+    <input type="number" placeholder="ex. 100(kg)" id="bmiWeight">
+  <p></p>
+    <label for="bmiHeight">Height in cm</label>
+    <input type="number" placeholder="ex. 60(cm)" id="bmiHeight">
+  <p></p>
+    <button type="button" onclick="getBMI();">Get BMI</button>
+    <p id="bmiValue"></p>
+  <p></p>
+  
+  <b> 1 REP MAX CALCULATOR</b>
+  <p></p>
+    <label for="rmWeight">Weight in kg</label>
+    <input type="number" placeholder="ex. 100(kg)" id="rmWeight">
+    
+  <p></p>
+    <label for="rmReps">Reps</label>
+    <input type="number" placeholder="ex. 10" id="rmReps">
+    
+  <p></p>
+    <button type="button" onclick="get1RM();">Get 1RM</button>
+    <p id="OneRMValue"></p>
+  <p></p>
+
+  <b> TDEE (Total Daily Energy Expenditure) CALCULATOR</b>
+  <p></p>
+    <label for="tdeeWeight">Weight in kg</label>
+    <input type="number" placeholder="ex. 100(kg)" id="tdeeWeight">
+    
+  <p></p>
+    <label for="tdeeHeight">Height in cm</label>
+    <input type="number" placeholder="ex. 60(cm)" id="tdeeHeight">
+    
+  <p></p>
+    <label for="tdeeAge">Age in years</label>
+    <input type="number" placeholder="ex. 20(years)" id="tdeeAge">
+    
+  <p></p>
+  <label for="tdeeSex">Choose a sex</label>
+  <select name="tdeeSex" id="tdeeSex">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  
+  <p></p>
+  <label for="tdeeActivity">Choose an activity level</label>
+  <select name="tdeeActivity" id="tdeeActivity">
+    <option value="sed">Sedentary (Little or no exercise)</option>
+    <option value="light">Lightly active (Light exercise/sports 3-5 days a week)</option>
+    <option value="mod">Moderately active (Moderate exercise/sports 3-5 days a week)</option>
+    <option value="very">Very active (Hard exercise/sports 6-7 days a week)</option>
+    <option value="extra">Extra active (Hard exercise/sports 6-7 days a week, plus physical job)</option>
+  </select>
+  
+  <p></p>
+    <button type="button" onclick="getTDEE();">Get TDEE</button>
+    <p id="tdeeValue"></p>
+  <p></p>
+</body>
+</html>

@@ -1,0 +1,69 @@
+body {
+  background-color: #14161a;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  margin-left: 20px;
+}
+
+h1 {
+  color: white;
+}
+
+nav {
+  background-color: #474c57;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  flex-grow: 1;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 4px solid transparent;
+}
+
+nav a:hover {
+  background-color: #111;
+}
+
+nav a.active {
+  border-bottom: 4px solid white;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/montserrat.woff2') format('woff2'),
+       url('fonts/montserrat.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
